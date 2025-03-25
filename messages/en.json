@@ -1,10 +1,27 @@
 {
+  "common": {
+    "navigation": {
+      "title": "Navigation",
+      "projects": "projects",
+      "about": "about me"
+    },
+    "unsplash": {
+      "noPhotographer": "Random photo from Unsplash",
+      "photoBy": "Random photo taken by",
+      "from": "from"
+    }
+  },
   "pages": {
     "home": {
       "title": "Hi, my name is",
       "name": "Dylan",
       "subtitle": "I'm a web developer who graduated from OpenClassrooms in 2024.",
       "readMore": "Read more",
+      "navigation": {
+        "title": "Navigation",
+        "projects": "projects",
+        "about": "about me"
+      },
       "skills": {
         "title": "Skills",
         "frontend": "Frontend",

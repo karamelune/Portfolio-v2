@@ -22,10 +22,9 @@ export default function HomePage() {
           </Link>
         </div>
 
-        {/* Photo de profil */}
+        {/* Photo */}
         <div className="col-span-1 bg-gray-800 rounded-xl overflow-hidden">
           <div className="relative h-full w-full min-h-[200px]">
-            {/* Remplacer par votre photo */}
             <div className="absolute inset-0 flex items-center justify-center text-4xl text-gray-600">
               👨‍💻
             </div>
@@ -53,7 +52,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Passion jeux vidéo et apprentissage continu */}
+        {/* Passions */}
         <div className="col-span-1 md:col-span-2 bg-gray-800 rounded-xl p-5">
           <div className="flex items-start space-x-4">
             <div className="min-w-[40px] h-10 px-2 bg-indigo-500 rounded-full flex items-center justify-center text-xl">

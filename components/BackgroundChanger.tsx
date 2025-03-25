@@ -2,29 +2,52 @@
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useTranslations } from 'next-intl';
 
 interface BackgroundChangerProps {
   query?: string;
   interval?: number;
   children: React.ReactNode;
+  className?: string;
 }
 
 interface StoredBackground {
   url: string;
   timestamp: number;
   query: string;
+  photographer?: string;
+  photographerUrl?: string;
 }
 
 export default function BackgroundChanger({
   query = 'landscape',
   interval = 300000, // milliseconds
   children,
+  className = '',
 }: BackgroundChangerProps) {
+  const t = useTranslations('common.unsplash');
   const [backgroundUrl, setBackgroundUrl] = useState<string>('');
+  const [photographer, setPhotographer] = useState<string>('');
+  const [photographerUrl, setPhotographerUrl] = useState<string>('');
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  // Check if device is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const fetchRandomImage = async () => {
+    // Skip fetching on mobile to improve performance
+    if (isMobile) return;
+
     try {
-      // Utiliser l'API route sécurisée
       const response = await axios.get(
         `/api/unsplash?query=${encodeURIComponent(query)}`,
       );
@@ -32,11 +55,19 @@ export default function BackgroundChanger({
       const newUrl = response.data.urls.regular;
       setBackgroundUrl(newUrl);
 
-      // Enregistrer dans localStorage
+      // Set photographer info for attribution
+      if (response.data.user) {
+        setPhotographer(response.data.user.name);
+        setPhotographerUrl(response.data.user.links.html);
+      }
+
+      // Store in localStorage
       const newBackground: StoredBackground = {
         url: newUrl,
         timestamp: Date.now(),
         query,
+        photographer: response.data.user?.name,
+        photographerUrl: response.data.user?.links.html,
       };
       localStorage.setItem('backgroundInfo', JSON.stringify(newBackground));
     } catch (error) {
@@ -45,9 +76,10 @@ export default function BackgroundChanger({
   };
 
   useEffect(() => {
-    // Vérifier s'il existe un fond enregistré et s'il est encore valide
+    // Skip on mobile
+    if (isMobile) return;
+
     const checkAndUpdateBackground = () => {
-      // Vérifier si nous sommes côté client (pour éviter les erreurs SSR)
       if (typeof window === 'undefined') return;
 
       const storedBackgroundJSON = localStorage.getItem('backgroundInfo');
@@ -59,22 +91,24 @@ export default function BackgroundChanger({
           const currentTime = Date.now();
           const elapsedTime = currentTime - storedBackground.timestamp;
 
-          // Récupérer une nouvelle image si la requête a changé
           if (storedBackground.query !== query) {
             fetchRandomImage();
             return;
           }
 
-          // Utiliser l'image stockée si moins de 2 minutes se sont écoulées
           if (elapsedTime < interval) {
             setBackgroundUrl(storedBackground.url);
+            if (storedBackground.photographer) {
+              setPhotographer(storedBackground.photographer);
+            }
+            if (storedBackground.photographerUrl) {
+              setPhotographerUrl(storedBackground.photographerUrl);
+            }
 
-            // Programmer le prochain changement d'image
             const remainingTime = interval - elapsedTime;
             const timeoutId = setTimeout(fetchRandomImage, remainingTime);
             return () => clearTimeout(timeoutId);
           } else {
-            // Intervalle dépassé, récupérer une nouvelle image
             fetchRandomImage();
           }
         } catch (error) {
@@ -82,35 +116,75 @@ export default function BackgroundChanger({
           fetchRandomImage();
         }
       } else {
-        // Aucun fond stocké, en récupérer un nouveau
         fetchRandomImage();
       }
     };
 
     checkAndUpdateBackground();
 
-    // Configurer l'intervalle pour les changements suivants
-    const intervalId = setInterval(fetchRandomImage, interval);
-
-    return () => clearInterval(intervalId);
+    // Only set interval if not mobile
+    if (!isMobile) {
+      const intervalId = setInterval(fetchRandomImage, interval);
+      return () => clearInterval(intervalId);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query, interval]);
+  }, [query, interval, isMobile]);
 
   return (
-    <div className="relative min-h-screen w-full">
-      {/* Fond d'écran avec transition */}
+    <div className={`relative min-h-screen w-full ${className}`}>
+      {/* Background only shown on desktop */}
+      {!isMobile && backgroundUrl && (
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat brightness-50"
+          style={{
+            backgroundImage: `url(${backgroundUrl})`,
+          }}
+        />
+      )}
+      {/* Overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-50"
-        style={{
-          backgroundImage: backgroundUrl ? `url(${backgroundUrl})` : 'none',
-        }}
+        className={`absolute inset-0 ${!isMobile ? 'bg-black/70' : 'bg-black'}`}
       />
-
-      {/* Overlay pour améliorer la lisibilité du contenu */}
-      <div className="absolute inset-0 bg-black/70" />
-
-      {/* Contenu */}
-      <div className="relative z-10 w-full">{children}</div>
+      {/* Photo credits (only on desktop) */}
+      {!isMobile && backgroundUrl && (
+        <div className="absolute bottom-14 left-2 text-xs text-white/70 z-20">
+          {photographer ? (
+            <span>
+              {t('photoBy')}{' '}
+              <a
+                href={`${photographerUrl}?utm_source=your_app_name&utm_medium=referral`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white"
+              >
+                {photographer}
+              </a>{' '}
+              {t('from')}{' '}
+              <a
+                href="https://unsplash.com/?utm_source=your_app_name&utm_medium=referral"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white"
+              >
+                Unsplash
+              </a>
+            </span>
+          ) : (
+            <a
+              href="https://unsplash.com/?utm_source=your_app_name&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white"
+            >
+              {t('noPhotographer')}
+            </a>
+          )}
+        </div>
+      )}
+      {/* Content */}
+      <div className="relative z-10 w-full flex flex-col flex-grow">
+        {children}
+      </div>
     </div>
   );
 }

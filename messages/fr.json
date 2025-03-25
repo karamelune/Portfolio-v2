@@ -1,10 +1,23 @@
 {
+  "common": {
+    "navigation": {
+      "title": "Navigation",
+      "projects": "projets",
+      "about": "à propos"
+    },
+    "unsplash": {
+      "noPhotographer": "Photo aléatoire provenant d'Unsplash",
+      "photoBy": "Photo aléatoire prise par",
+      "from": "depuis"
+    }
+  },
   "pages": {
     "home": {
       "title": "Salut, moi c'est",
       "name": "Dylan",
       "subtitle": "Je suis développeur intégrateur web, diplômé d'OpenClassrooms en 2024.",
       "readMore": "En savoir plus",
+
       "skills": {
         "title": "Compétences",
         "frontend": "Frontend",
