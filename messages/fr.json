@@ -9,7 +9,8 @@
       "noPhotographer": "Photo aléatoire provenant d'Unsplash",
       "photoBy": "Photo aléatoire prise par",
       "from": "depuis"
-    }
+    },
+    "footer": "Fait avec le 💜 par moi-même"
   },
   "pages": {
     "home": {

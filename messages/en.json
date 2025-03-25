@@ -9,7 +9,8 @@
       "noPhotographer": "Random photo from Unsplash",
       "photoBy": "Random photo taken by",
       "from": "from"
-    }
+    },
+    "footer": "Made with 💜 by myself"
   },
   "pages": {
     "home": {
