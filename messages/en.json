@@ -1,0 +1,54 @@
+{
+  "pages": {
+    "home": {
+      "title": "Hi, my name is",
+      "name": "Dylan",
+      "subtitle": "I'm a web developer who graduated from OpenClassrooms in 2024.",
+      "readMore": "Read more",
+      "skills": {
+        "title": "Skills",
+        "frontend": "Frontend",
+        "backend": "APIs & Data"
+      },
+      "gaming": {
+        "title": "Gaming enthusiast",
+        "description": "As a fan of strategy games, I apply these analytical skills to my code."
+      },
+      "learning": {
+        "title": "Lifelong learning",
+        "description": "I'm constantly looking to improve and learn new technologies to stay at the cutting edge. Technology watch is an integral part of my routine."
+      },
+      "codeQuality": {
+        "title": "Clean code",
+        "description": "Clean, optimized code that's easy to maintain over the long term."
+      },
+      "projects": {
+        "title": "My projects",
+        "description": "Modern websites combining Next.js, React and TailwindCSS for optimal user experiences.",
+        "viewButton": "View projects"
+      },
+      "contact": {
+        "title": "Let's work together",
+        "description": "Ready to make your ideas a reality?",
+        "emailButton": "Send a mail",
+        "socials": "My socials"
+      }
+    },
+    "projects": {
+      "title": "My projects",
+      "subtitle": "Discover the projects I've worked on, from frontend development to fullstack applications.",
+      "liveButton": "See live",
+      "categories": {
+        "all": "All",
+        "frontend": "Frontend",
+        "fullstack": "Fullstack",
+        "mobile": "Mobile",
+        "other": "Others"
+      },
+      "noProjects": {
+        "title": "No projects found",
+        "message": "No projects match this filter. Try another category."
+      }
+    }
+  }
+}

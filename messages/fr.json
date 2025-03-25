@@ -1,0 +1,54 @@
+{
+  "pages": {
+    "home": {
+      "title": "Salut, moi c'est",
+      "name": "Dylan",
+      "subtitle": "Je suis développeur intégrateur web, diplômé d'OpenClassrooms en 2024.",
+      "readMore": "En savoir plus",
+      "skills": {
+        "title": "Compétences",
+        "frontend": "Frontend",
+        "backend": "APIs & Données"
+      },
+      "gaming": {
+        "title": "Passionné de jeux",
+        "description": "Fan de jeux de stratégie, j'applique ces compétences d'analyse dans mon code."
+      },
+      "learning": {
+        "title": "Apprentissage continu",
+        "description": "Je cherche constamment à m'améliorer et à apprendre de nouvelles technologies pour rester à la pointe. La veille technologique fait partie intégrante de mon quotidien."
+      },
+      "codeQuality": {
+        "title": "Code performant",
+        "description": "Du code propre, optimisé et facile à maintenir sur le long terme."
+      },
+      "projects": {
+        "title": "Mes projets",
+        "description": "Des sites web modernes combinant Next.js, React et TailwindCSS pour des expériences utilisateurs optimales.",
+        "viewButton": "Voir les projets"
+      },
+      "contact": {
+        "title": "Travaillons ensemble",
+        "description": "Prêt à transformer vos idées en réalité ?",
+        "emailButton": "Envoyer un email",
+        "socials": "Mes réseaux"
+      }
+    },
+    "projects": {
+      "title": "Mes projets",
+      "subtitle": "Découvrez les projets sur lesquels j'ai travaillé, du développement frontend aux applications fullstack.",
+      "liveButton": "Voir en ligne",
+      "categories": {
+        "all": "Tous",
+        "frontend": "Frontend",
+        "fullstack": "Fullstack",
+        "mobile": "Mobile",
+        "other": "Autres"
+      },
+      "noProjects": {
+        "title": "Aucun projet trouvé",
+        "message": "Aucun projet ne correspond à ce filtre. Essayez une autre catégorie."
+      }
+    }
+  }
+}
