@@ -2,15 +2,32 @@
   "common": {
     "navigation": {
       "title": "Navigation",
+      "description": "Explore my portfolio",
+      "about": "about me",
+      "aboutDesc": "Find out more about me",
       "projects": "projects",
-      "about": "about me"
+      "projectsDesc": "Discover my creations"
+    },
+    "footer": "Made with 💜 by myself",
+    "languages": {
+      "title": "Language",
+      "changeLanguage": "Change language",
+      "active": "Active"
+    },
+    "projectCard": {
+      "live": "Live demo",
+      "moreDetails": "✨ Click for more details ✨",
+      "viewAll": "View all projects",
+      "viewAllCard": {
+        "title": "Go check all my projects!",
+        "description": "Click on the button below to see all the projects."
+      }
     },
     "unsplash": {
       "noPhotographer": "Random photo from Unsplash",
       "photoBy": "Random photo taken by",
       "from": "from"
-    },
-    "footer": "Made with 💜 by myself"
+    }
   },
   "pages": {
     "home": {
@@ -26,24 +43,36 @@
       "skills": {
         "title": "Skills",
         "frontend": "Frontend",
-        "backend": "APIs & Data"
+        "backend": "APIs & Data",
+        "design": "Design"
       },
-      "gaming": {
-        "title": "Gaming enthusiast",
-        "description": "As a fan of strategy games, I apply these analytical skills to my code."
+      "passions": {
+        "title": "My hobbies",
+        "gaming": {
+          "title": "Gaming enthusiast",
+          "description": "Passionate about strategy games, I enjoy taking on complex challenges and finding optimal solutions. This analytical and methodical approach guides my development work, where each project is approached with thought and precision."
+        },
+        "learning": {
+          "title": "Lifelong learning",
+          "description": "I'm constantly looking to improve and learn new technologies to stay at the cutting edge. Technology watch is an integral part of my routine."
+        },
+        "music": {
+          "title": "Music",
+          "description": "Music helps me concentrate during long coding sessions. It stimulates my creativity and improves my productivity when I'm developing."
+        }
       },
-      "learning": {
-        "title": "Lifelong learning",
-        "description": "I'm constantly looking to improve and learn new technologies to stay at the cutting edge. Technology watch is an integral part of my routine."
-      },
-      "codeQuality": {
+
+      "cleanCode": {
         "title": "Clean code",
-        "description": "Clean, optimized code that's easy to maintain over the long term."
+        "description": "Clean, optimized code that's easy to maintain over the long term.",
+        "li1": "Unit and integration testing",
+        "li2": "A clear and maintainable architecture",
+        "li3": "Documented and versioned code"
       },
       "projects": {
         "title": "My projects",
         "description": "Modern websites combining Next.js, React and TailwindCSS for optimal user experiences.",
-        "viewButton": "View projects"
+        "viewAll": "View projects"
       },
       "contact": {
         "title": "Let's work together",

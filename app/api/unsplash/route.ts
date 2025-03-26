@@ -17,6 +17,19 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(response.data);
   } catch (error) {
+    // Rate limit management
+    if (axios.isAxiosError(error) && error.response?.status === 429) {
+      // Do not log this error in production
+      if (process.env.NODE_ENV !== 'production') {
+        console.error('Rate limit exceeded on Unsplash API');
+      }
+      return NextResponse.json(
+        { error: 'Rate limit exceeded', type: 'rate_limit' },
+        { status: 500 },
+      );
+    }
+
+    // Other errors
     console.error('Error fetching from Unsplash:', error);
     return NextResponse.json(
       { error: 'Failed to fetch image' },

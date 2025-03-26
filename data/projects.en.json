@@ -4,7 +4,7 @@
     "description": "My portfolio developed with Next.js and TailwindCSS, presenting my projects and skills.",
     "category": "frontend",
     "technologies": ["Next.js", "React", "TailwindCSS", "next-intl"],
-    "github": "https://github.com/votre-username/portfolio",
+    "github": "https://github.com/karamelune/Portfolio-v2",
     "youAreHere": "You're already there!✨",
     "emoji": "🎨"
   },
@@ -13,8 +13,8 @@
     "description": "Une application fullstack permettant de gérer des tâches avec authentification et stockage en base de données.",
     "category": "fullstack",
     "technologies": ["React", "Node.js", "Express", "MongoDB", "JWT"],
-    "github": "https://github.com/votre-username/task-manager",
-    "live": "https://votre-taskapp.com",
+    "github": "https://github.com/",
+    "live": "https://exemple.com",
     "emoji": "✅"
   },
   {
@@ -28,7 +28,7 @@
       "PostgreSQL",
       "TailwindCSS"
     ],
-    "github": "https://github.com/votre-username/ecommerce",
+    "github": "https://github.com/",
     "emoji": "🛒"
   },
   {
@@ -36,8 +36,8 @@
     "description": "Reproduction de l'interface utilisateur de Netflix avec React et CSS modules.",
     "category": "frontend",
     "technologies": ["React", "CSS Modules", "API REST"],
-    "github": "https://github.com/votre-username/netflix-clone",
-    "live": "https://votre-netflixclone.com",
+    "github": "https://github.com/",
+    "live": "https://exemple.com",
     "emoji": "📺"
   },
   {
@@ -45,7 +45,7 @@
     "description": "Application mobile affichant les prévisions météo basées sur la géolocalisation de l'utilisateur.",
     "category": "mobile",
     "technologies": ["React Native", "API OpenWeather", "Geolocation"],
-    "github": "https://github.com/votre-username/weather-app",
+    "github": "https://github.com/",
     "emoji": "☁️"
   },
   {
@@ -53,8 +53,8 @@
     "description": "Plateforme de blog avec système de gestion de contenu pour partager des articles techniques.",
     "category": "fullstack",
     "technologies": ["Gatsby", "MDX", "GraphQL", "Netlify CMS"],
-    "github": "https://github.com/votre-username/tech-blog",
-    "live": "https://votre-blog.com",
+    "github": "https://github.com/",
+    "live": "https://exemple.com",
     "emoji": "📝"
   }
 ]

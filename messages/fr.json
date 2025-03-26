@@ -2,15 +2,32 @@
   "common": {
     "navigation": {
       "title": "Navigation",
+      "description": "Explorez mon portfolio",
+      "about": "à propos",
+      "aboutDesc": "En savoir plus sur mon parcours",
       "projects": "projets",
-      "about": "à propos"
+      "projectsDesc": "Découvrir mes réalisations"
+    },
+    "footer": "Fait avec le 💜 par moi-même",
+    "languages": {
+      "title": "Langue",
+      "changeLanguage": "Changer la langue",
+      "active": "Actif"
+    },
+    "projectCard": {
+      "live": "Démo live",
+      "moreDetails": "✨ Cliquez pour plus de détails ✨",
+      "viewAll": "Voir tous les projets",
+      "viewAllCard": {
+        "title": "Allez voir tous les projets!",
+        "description": "N'hésitez pas à cliquer sur le bouton ci-dessous pour voir tous les projets."
+      }
     },
     "unsplash": {
       "noPhotographer": "Photo aléatoire provenant d'Unsplash",
       "photoBy": "Photo aléatoire prise par",
       "from": "depuis"
-    },
-    "footer": "Fait avec le 💜 par moi-même"
+    }
   },
   "pages": {
     "home": {
@@ -22,24 +39,36 @@
       "skills": {
         "title": "Compétences",
         "frontend": "Frontend",
-        "backend": "APIs & Données"
+        "backend": "APIs & Données",
+        "design": "Design"
       },
-      "gaming": {
-        "title": "Passionné de jeux",
-        "description": "Fan de jeux de stratégie, j'applique ces compétences d'analyse dans mon code."
+      "passions": {
+        "title": "Mes passions",
+        "gaming": {
+          "title": "Passionné de jeux",
+          "description": "Passionné par les jeux de stratégie, j'aime relever des défis complexes et trouver des solutions optimales. Cette approche analytique et méthodique guide mon travail de développement, où chaque projet est abordé avec réflexion et précision."
+        },
+        "learning": {
+          "title": "Apprentissage continu",
+          "description": "Je cherche constamment à m'améliorer et à apprendre de nouvelles technologies pour rester à la pointe. La veille technologique fait partie intégrante de mon quotidien."
+        },
+        "music": {
+          "title": "Musique",
+          "description": "La musique m'aide à me concentrer pendant de longues sessions de codage. Elle stimule ma créativité et améliore ma productivité quand je développe."
+        }
       },
-      "learning": {
-        "title": "Apprentissage continu",
-        "description": "Je cherche constamment à m'améliorer et à apprendre de nouvelles technologies pour rester à la pointe. La veille technologique fait partie intégrante de mon quotidien."
-      },
-      "codeQuality": {
+
+      "cleanCode": {
         "title": "Code performant",
-        "description": "Du code propre, optimisé et facile à maintenir sur le long terme."
+        "description": "Du code propre, optimisé et facile à maintenir sur le long terme.",
+        "li1": "Tests unitaires et d'intégration",
+        "li2": "Architecture claire et maintenable",
+        "li3": "Code documenté et versionné"
       },
       "projects": {
         "title": "Mes projets",
         "description": "Des sites web modernes combinant Next.js, React et TailwindCSS pour des expériences utilisateurs optimales.",
-        "viewButton": "Voir les projets"
+        "viewAll": "Voir les projets"
       },
       "contact": {
         "title": "Travaillons ensemble",

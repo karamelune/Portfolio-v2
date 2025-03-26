@@ -21,7 +21,7 @@ interface StoredBackground {
 
 export default function BackgroundChanger({
   query = 'landscape',
-  interval = 300000, // milliseconds
+  interval = 600000, // milliseconds
   children,
   className = '',
 }: BackgroundChangerProps) {
@@ -71,7 +71,24 @@ export default function BackgroundChanger({
       };
       localStorage.setItem('backgroundInfo', JSON.stringify(newBackground));
     } catch (error) {
-      console.error("Erreur lors du chargement de l'image:", error);
+      if (!(axios.isAxiosError(error) && error.response?.status === 500)) {
+        console.error('Error while loading the photo:', error);
+      }
+
+      // If the request failed, reset the background and photographer info
+      if (axios.isAxiosError(error) && error.response?.status === 500) {
+        setBackgroundUrl('');
+        setPhotographer('');
+        setPhotographerUrl('');
+
+        // Store empty background in localStorage to prevent repeated calls
+        const emptyBackground: StoredBackground = {
+          url: '',
+          timestamp: Date.now(),
+          query,
+        };
+        localStorage.setItem('backgroundInfo', JSON.stringify(emptyBackground));
+      }
     }
   };
 
@@ -112,7 +129,10 @@ export default function BackgroundChanger({
             fetchRandomImage();
           }
         } catch (error) {
-          console.error("Erreur lors de l'analyse du fond stocké:", error);
+          console.error(
+            'Error during analysis of the stored background:',
+            error,
+          );
           fetchRandomImage();
         }
       } else {
@@ -132,7 +152,7 @@ export default function BackgroundChanger({
 
   return (
     <div className={`relative min-h-screen w-full ${className}`}>
-      {/* Background only shown on desktop */}
+      {/* Background only shown on desktop when available */}
       {!isMobile && backgroundUrl && (
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat brightness-50"
@@ -141,12 +161,14 @@ export default function BackgroundChanger({
           }}
         />
       )}
-      {/* Overlay */}
+      {/* Overlay - full black when no background or mobile */}
       <div
-        className={`absolute inset-0 ${!isMobile ? 'bg-black/70' : 'bg-black'}`}
+        className={`absolute inset-0 ${
+          !isMobile && backgroundUrl ? 'bg-black/70' : 'bg-black'
+        }`}
       />
-      {/* Photo credits (only on desktop) */}
-      {!isMobile && backgroundUrl && (
+      {/* Photo credits (only on desktop and when background is available) */}
+      {!isMobile && backgroundUrl && photographer && (
         <div className="absolute bottom-14 left-2 text-xs text-white/70 z-20">
           {photographer ? (
             <span>
