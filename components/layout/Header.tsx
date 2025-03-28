@@ -133,15 +133,13 @@ export function Header() {
           <div className="relative z-50">
             <Link
               href={'/'}
-              className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full   
+              className="flex items-center justify-center w-12 h-12 rounded-full   
               bg-gray-800/70 hover:bg-gray-700/90 backdrop-blur-sm  
               shadow-md transition-all duration-300 border border-gray-700/50   
               overflow-hidden group transform hover:scale-105 active:scale-95"
               aria-label="Accueil"
             >
-              <span className="text-xl md:text-2xl transition-transform">
-                🏠
-              </span>
+              <span className="text-xl transition-transform">🏠</span>
               <div
                 className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10   
                     rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -153,14 +151,12 @@ export function Header() {
             <button
               ref={buttonRef}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="flex justify-center items-center w-12 h-12 md:w-14 md:h-14 rounded-full 
+              className="flex justify-center items-center w-12 h-12 rounded-full 
                       bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 
                       shadow-md transition-all transform hover:scale-105 active:scale-95"
               aria-label="Menu"
             >
-              <span className="text-xl md:text-2xl">
-                {isMenuOpen ? '✖️' : '📋'}
-              </span>
+              <span className="text-xl">{isMenuOpen ? '✖️' : '📋'}</span>
             </button>
 
             {/* Desktop */}

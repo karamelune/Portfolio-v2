@@ -1,10 +1,10 @@
-import { SocialLinks } from '@/components/ui/SocialIcons';
 import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useMemo } from 'react';
 import ProjectCarousel from '@/components/ProjectCarousel';
 import projectsEN from '@/data/projects.en.json';
 import projectsFR from '@/data/projects.fr.json';
+import ContactSection from '@/components/ContactSection';
 
 export default function HomePage() {
   const t = useTranslations('pages.home');
@@ -44,25 +44,8 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Contact + Socials */}
-        <div className="col-span-1 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl p-5 text-white flex flex-col justify-between">
-          <div>
-            <h3 className="text-xl font-bold mb-3">{t('contact.title')}</h3>
-            <p className="mb-3 text-sm">{t('contact.description')}</p>
-            <a
-              href="mailto:dylanckx@gmail.com"
-              className="bg-white text-purple-700 px-3 py-1 rounded-lg text-sm inline-block hover:bg-opacity-90"
-            >
-              {t('contact.emailButton')}
-            </a>
-          </div>
-          <div className="mt-4 pt-3 border-t border-white/20">
-            <h4 className="text-sm font-bold text-slate-200 mb-2">
-              {t('contact.socials')}
-            </h4>
-            <SocialLinks />
-          </div>
-        </div>
+        {/* Contact */}
+        <ContactSection />
 
         {/* Clean Code */}
         <div className="col-span-1 md:col-span-2 bg-gray-800 rounded-xl p-5">

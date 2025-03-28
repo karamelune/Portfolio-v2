@@ -100,14 +100,14 @@ export default function LanguageSwitcher() {
       <button
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full   
+        className={`flex items-center justify-center w-12 h-12 rounded-full   
            bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500  
            shadow-md transition-all duration-300 transform hover:scale-105 active:scale-95  
            ${isChanging ? 'opacity-70 cursor-not-allowed' : ''}`}
         disabled={isChanging}
         aria-label={t('changeLanguage')}
       >
-        <span className="text-xl md:text-2xl">{flags[locale].emoji}</span>
+        <span className="text-xl">{flags[locale].emoji}</span>
       </button>
 
       <AnimatePresence>

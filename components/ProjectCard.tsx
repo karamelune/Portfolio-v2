@@ -17,7 +17,7 @@ export default function ProjectCard({
   locale,
   isDragging,
 }: ProjectCardProps) {
-  const t = useTranslations('common.projectCard');
+  const t = useTranslations('components.projectCard');
   const [isFlipped, setIsFlipped] = useState(false);
   const cardRef = useRef(null);
   const [hoverScale, setHoverScale] = useState(1);
@@ -107,7 +107,7 @@ export default function ProjectCard({
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-800 hover:bg-gray-700 text-white py-2 px-3 rounded text-center transition-colors max-w-[400px] w-full"
+                  className="bg-gray-800 hover:bg-gray-600 text-white py-2 px-3 rounded text-center transition-colors max-w-[400px] w-full"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <span className="mr-2">🔗</span> GitHub

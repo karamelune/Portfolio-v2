@@ -9,52 +9,45 @@
     "emoji": "🎨"
   },
   {
-    "title": "Application de Gestion de Tâches",
-    "description": "Une application fullstack permettant de gérer des tâches avec authentification et stockage en base de données.",
-    "category": "fullstack",
-    "technologies": ["React", "Node.js", "Express", "MongoDB", "JWT"],
-    "github": "https://github.com/",
-    "live": "https://exemple.com",
-    "emoji": "✅"
-  },
-  {
-    "title": "Site E-commerce",
-    "description": "Boutique en ligne avec panier d'achat, paiement sécurisé et gestion des commandes.",
-    "category": "fullstack",
-    "technologies": [
-      "Next.js",
-      "Stripe",
-      "Prisma",
-      "PostgreSQL",
-      "TailwindCSS"
-    ],
-    "github": "https://github.com/",
-    "emoji": "🛒"
-  },
-  {
-    "title": "Clone d'Interface",
-    "description": "Reproduction de l'interface utilisateur de Netflix avec React et CSS modules.",
+    "title": "Banking application",
+    "description": "Front-end implementation of a banking application with React and Redux.",
     "category": "frontend",
-    "technologies": ["React", "CSS Modules", "API REST"],
-    "github": "https://github.com/",
-    "live": "https://exemple.com",
-    "emoji": "📺"
+    "technologies": ["React", "Redux", "Axios", "Swagger", "MongoDB"],
+    "github": "https://github.com/karamelune/OC-P11-ArgentBank",
+    "emoji": "💵"
   },
   {
-    "title": "Application Météo",
-    "description": "Application mobile affichant les prévisions météo basées sur la géolocalisation de l'utilisateur.",
-    "category": "mobile",
-    "technologies": ["React Native", "API OpenWeather", "Geolocation"],
-    "github": "https://github.com/",
-    "emoji": "☁️"
+    "title": "Event agency",
+    "description": "Debugging, implementation of unit tests and front-end optimization for an event agency.",
+    "category": "other",
+    "technologies": ["DevTools"],
+    "github": "https://github.com/karamelune/OC-P10-724Events",
+    "emoji": "🎫"
   },
   {
-    "title": "Blog Tech",
-    "description": "Plateforme de blog avec système de gestion de contenu pour partager des articles techniques.",
-    "category": "fullstack",
-    "technologies": ["Gatsby", "MDX", "GraphQL", "Netlify CMS"],
-    "github": "https://github.com/",
-    "live": "https://exemple.com",
-    "emoji": "📝"
+    "title": "Photographer's portfolio",
+    "description": "SEO optimization for a photographer's portfolio.",
+    "category": "other",
+    "technologies": ["SEO", "Facebook Open Graph", "X Cards"],
+    "github": "https://github.com/karamelune/OC-P9-NinaCarducci",
+    "live": "https://karamelune.github.io/OC-P9-NinaCarducci/",
+    "emoji": "📷"
+  },
+  {
+    "title": "Housing reservations",
+    "description": "Creation of the front-end for a housing reservation application with Vite.",
+    "category": "frontend",
+    "technologies": ["Vite", "React Router", "Sass"],
+    "github": "https://github.com/karamelune/OC-P8-Kasa",
+    "emoji": "🏠"
+  },
+  {
+    "title": "Restaurant reservation interface",
+    "description": "Improving the interface of a restaurant reservation site with CSS animations. First project as a student!",
+    "category": "frontend",
+    "technologies": ["CSS", "Sass", "Git"],
+    "github": "https://github.com/karamelune/OC-P4-OhMyFood",
+    "live": "https://karamelune.github.io/OC-P4-OhMyFood/",
+    "emoji": "🍔"
   }
 ]

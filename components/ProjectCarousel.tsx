@@ -2,9 +2,9 @@
 
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence, PanInfo } from 'framer-motion';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import ProjectCard from './ProjectCard';
+import { useRouter } from 'next/navigation';
 
 export type Project = {
   title: string;
@@ -27,7 +27,8 @@ export default function ProjectCarousel({
   locale,
 }: ProjectCarouselProps) {
   const t = useTranslations('pages.home.projects');
-  const tC = useTranslations('common.projectCard');
+  const tC = useTranslations('components.projectCard');
+  const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState<number>(0);
   const [isDragging, setIsDragging] = useState(false);
@@ -118,7 +119,14 @@ export default function ProjectCarousel({
             >
               {/* Special “See all projects” teaser card */}
               {currentIndex === allProjects.length - 1 ? (
-                <div className="h-64 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-4 flex flex-col items-center justify-center text-center">
+                <div
+                  className="h-64 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-4 flex flex-col items-center justify-center text-center cursor-pointer transition-transform hover:scale-[101%]"
+                  onClick={() => {
+                    if (!isDragging) {
+                      router.push(`/${locale}/projects`);
+                    }
+                  }}
+                >
                   <div className="text-5xl mb-4">🚀</div>
                   <h3 className="text-xl text-white font-bold mb-2">
                     {allProjects[currentIndex].title}
@@ -126,12 +134,6 @@ export default function ProjectCarousel({
                   <p className="text-white/80 mb-6">
                     {allProjects[currentIndex].description}
                   </p>
-                  <Link
-                    href={`${locale}/projects`}
-                    className="bg-white hover:bg-white/90 text-purple-700 px-6 py-2 rounded-full font-medium transition-colors"
-                  >
-                    {t('viewAll')} ✨
-                  </Link>
                 </div>
               ) : (
                 <ProjectCard
@@ -153,7 +155,7 @@ export default function ProjectCarousel({
           >
             👈
           </button>
-          <div className="flex space-x-2">
+          <div className="flex space-x-4">
             {allProjects.map((_, idx) => (
               <button
                 key={idx}
@@ -161,7 +163,7 @@ export default function ProjectCarousel({
                   setDirection(idx > currentIndex ? 1 : -1);
                   setCurrentIndex(idx);
                 }}
-                className={`h-2 w-2 rounded-full ${
+                className={`h-4 w-4 rounded-full ${
                   idx === currentIndex ? 'bg-purple-500' : 'bg-gray-600'
                 }`}
                 aria-label={`Go to project ${idx + 1}`}

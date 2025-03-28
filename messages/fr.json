@@ -14,25 +14,33 @@
       "changeLanguage": "Changer la langue",
       "active": "Actif"
     },
-    "projectCard": {
-      "live": "Démo live",
-      "moreDetails": "✨ Cliquez pour plus de détails ✨",
-      "viewAll": "Voir tous les projets",
-      "viewAllCard": {
-        "title": "Allez voir tous les projets!",
-        "description": "N'hésitez pas à cliquer sur le bouton ci-dessous pour voir tous les projets."
-      }
-    },
     "unsplash": {
       "noPhotographer": "Photo aléatoire provenant d'Unsplash",
       "photoBy": "Photo aléatoire prise par",
       "from": "depuis"
     }
   },
+  "components": {
+    "contact": {
+      "title": "Travaillons ensemble",
+      "description": "Prêt à transformer vos idées en réalité ?",
+      "emailButton": "Envoyer un email",
+      "socials": "Mes réseaux"
+    },
+    "projectCard": {
+      "live": "Démo live",
+      "moreDetails": "✨ Cliquez pour plus de détails ✨",
+      "viewAll": "Voir tous les projets",
+      "viewAllCard": {
+        "title": "Allez voir tous les projets!",
+        "description": "N'hésitez pas à cliquer sur cette carte pour voir tous les projets."
+      }
+    }
+  },
   "pages": {
     "home": {
       "title": "Salut, moi c'est",
-      "name": "Dylan",
+      "name": "Dylan! 👋",
       "subtitle": "Je suis développeur intégrateur web, diplômé d'OpenClassrooms en 2024.",
       "readMore": "En savoir plus",
 
@@ -69,12 +77,6 @@
         "title": "Mes projets",
         "description": "Des sites web modernes combinant Next.js, React et TailwindCSS pour des expériences utilisateurs optimales.",
         "viewAll": "Voir les projets"
-      },
-      "contact": {
-        "title": "Travaillons ensemble",
-        "description": "Prêt à transformer vos idées en réalité ?",
-        "emailButton": "Envoyer un email",
-        "socials": "Mes réseaux"
       }
     },
     "projects": {
@@ -91,6 +93,55 @@
       "noProjects": {
         "title": "Aucun projet trouvé",
         "message": "Aucun projet ne correspond à ce filtre. Essayez une autre catégorie."
+      }
+    },
+    "about": {
+      "title": "Hello, moi c'est Dylan! 👋",
+      "subtitle": "Sur cette page, vous en saurez plus sur mon parcours et mes compétences.",
+      "bio": {
+        "title": "Qui suis-je",
+        "paragraph1": "À 25 ans, j'ai transformé ma passion pour les jeux vidéo et l'informatique en métier grâce à une formation sur OpenClassrooms qui m'a permis de décrocher ma certification de développeur intégrateur web (niveau 5) en 2024. Un rêve de gamin devenu réalité après des heures (beaucoup d'heures !) d'apprentissage et de pratique.",
+        "paragraph2": "Je suis ce genre de développeur qui passe des soirées entières à peaufiner les détails - c'est plus fort que moi ! Cette attention particulière fait que mon code reste lisible et bien structuré. Ce qui me fait vraiment vibrer ? Voir un projet prendre vie, résoudre des problèmes complexes et apprendre constamment.",
+        "paragraph3": "Chaque bug résolu est une petite victoire personnelle qui me pousse à me dépasser et à explorer de nouvelles possibilités."
+      },
+      "skills": {
+        "title": "Compétences",
+        "frontend": {
+          "title": "Frontend",
+          "list": "React & React Native, Next.js/Vite, Redux, JavaScript/TypeScript, Responsive Design"
+        },
+        "backend": {
+          "title": "Backend",
+          "list": "REST APIs, GraphQL, MongoDB/SQL, Mongoose"
+        },
+        "design": {
+          "title": "Design",
+          "list": "TailwindCSS, HTML5/CSS3, Intégration de maquette, Figma"
+        },
+        "other": {
+          "title": "Autres",
+          "list": "SEO, Accessibilité, Optimisation de performances, Tests (Jest)"
+        }
+      },
+      "approach": {
+        "title": "Ma philosophie",
+        "description": "Un équilibre parfait entre excellence technique et expérience utilisateur.",
+        "pointTitle1": "Code élégant",
+        "point1": "Clair, structuré, maintenable",
+        "pointTitle2": "Performance",
+        "point2": "Rapide et efficace",
+        "pointTitle3": "Évolutivité",
+        "point3": "Architecture évolutive et adaptable",
+        "pointTitle4": "Expérience utilisateur",
+        "point4": "Interfaces intuitives et accessibles"
+      },
+      "education": {
+        "title": "Études",
+        "item1": {
+          "degree": "Dévéloppeur intégrateur web",
+          "years": "2023-2024",
+          "description": "Cette certification niveau 5 valide mes compétences à concevoir, développer et déployer des solutions web complètes, maîtrisant l'intégralité du cycle de développement et les technologies front/back-end pour créer des applications performantes et centrées utilisateur."
+        }
       }
     }
   }

@@ -20,7 +20,7 @@
       "viewAll": "View all projects",
       "viewAllCard": {
         "title": "Go check all my projects!",
-        "description": "Click on the button below to see all the projects."
+        "description": "Click on this card to see all the projects."
       }
     },
     "unsplash": {
@@ -29,10 +29,27 @@
       "from": "from"
     }
   },
+  "components": {
+    "contact": {
+      "title": "Travaillons ensemble",
+      "description": "Prêt à transformer vos idées en réalité ?",
+      "emailButton": "Envoyer un email",
+      "socials": "Mes réseaux"
+    },
+    "projectCard": {
+      "live": "Démo live",
+      "moreDetails": "✨ Cliquez pour plus de détails ✨",
+      "viewAll": "Voir tous les projets",
+      "viewAllCard": {
+        "title": "Allez voir tous les projets!",
+        "description": "N'hésitez pas à cliquer sur cette carte pour voir tous les projets."
+      }
+    }
+  },
   "pages": {
     "home": {
       "title": "Hi, my name is",
-      "name": "Dylan",
+      "name": "Dylan! 👋",
       "subtitle": "I'm a web developer who graduated from OpenClassrooms in 2024.",
       "readMore": "Read more",
       "navigation": {
@@ -73,12 +90,6 @@
         "title": "My projects",
         "description": "Modern websites combining Next.js, React and TailwindCSS for optimal user experiences.",
         "viewAll": "View projects"
-      },
-      "contact": {
-        "title": "Let's work together",
-        "description": "Ready to make your ideas a reality?",
-        "emailButton": "Send a mail",
-        "socials": "My socials"
       }
     },
     "projects": {
@@ -95,6 +106,55 @@
       "noProjects": {
         "title": "No projects found",
         "message": "No projects match this filter. Try another category."
+      }
+    },
+    "about": {
+      "title": "Hello, I'm Dylan! 👋",
+      "subtitle": "On this page, you'll find out more about my background and skills.",
+      "bio": {
+        "title": "Who am I?",
+        "paragraph1": "At the age of 25, I turned my passion for video games and IT into a profession thanks to a training course on OpenClassrooms, which enabled me to obtain my web integrator developer certification in 2024. It was a childhood dream that came true after hours (many hours!) of learning and practice.",
+        "paragraph2": "I'm the kind of developer who spends entire evenings fine-tuning the details - I can't help it! This attention to detail keeps my code readable and well structured. What really makes me tick? Seeing a project come to life, solving complex problems and constantly learning.",
+        "paragraph3": "Each bug solved is a small personal victory that pushes me to surpass myself and explore new possibilities."
+      },
+      "skills": {
+        "title": "Skills",
+        "frontend": {
+          "title": "Frontend",
+          "list": "React & React Native, Next.js/Vite, Redux, JavaScript/TypeScript, Responsive Design"
+        },
+        "backend": {
+          "title": "Backend",
+          "list": "REST APIs, GraphQL, MongoDB/SQL, Mongoose"
+        },
+        "design": {
+          "title": "Design",
+          "list": "TailwindCSS, HTML5/CSS3, Model integration, Figma"
+        },
+        "other": {
+          "title": "Autres",
+          "list": "SEO, Accessibility, Performance optimization, Tests (Jest)"
+        }
+      },
+      "approach": {
+        "title": "My philosophy",
+        "description": "A perfect balance between technical excellence and user experience.",
+        "pointTitle1": "Elegant code",
+        "point1": "Clear, structured, maintainable",
+        "pointTitle2": "Performance",
+        "point2": "Fast and efficient",
+        "pointTitle3": "Scalability",
+        "point3": "Scalable and adaptable architecture",
+        "pointTitle4": "User experience",
+        "point4": "Intuitive, accessible interfaces"
+      },
+      "education": {
+        "title": "Studies",
+        "item1": {
+          "degree": "Web developer integrator",
+          "years": "2023-2024",
+          "description": "This certification validates my skills in designing, developing and deploying complete web solutions, mastering the entire development cycle and front/back-end technologies to create high-performance, user-centric applications."
+        }
       }
     }
   }
