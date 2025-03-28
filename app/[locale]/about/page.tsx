@@ -194,7 +194,7 @@ export default function AboutPage() {
 
         {/* Contact Section Component */}
         <div className="col-span-1 md:col-span-4">
-          <ContactSection />
+          <ContactSection fullWidth />
         </div>
       </div>
     </div>
