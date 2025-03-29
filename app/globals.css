@@ -1,1 +1,53 @@
 @import 'tailwindcss';
+
+/* Infinite smooth marquee effect */
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.marquee {
+  display: flex;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 10px;
+  padding: 0 5px;
+  animation: scroll 30s linear infinite;
+  flex-shrink: 0;
+}
+
+.marquee-reverse .marquee-content {
+  animation: scroll-reverse 30s linear infinite;
+}
+
+.ticker-item {
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-reverse {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Optional hover pause */
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}

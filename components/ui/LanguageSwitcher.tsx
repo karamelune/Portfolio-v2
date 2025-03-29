@@ -102,7 +102,7 @@ export default function LanguageSwitcher() {
         onClick={() => setIsOpen(!isOpen)}
         className={`flex items-center justify-center w-12 h-12 rounded-full   
            bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500  
-           shadow-md transition-all duration-300 transform hover:scale-105 active:scale-95  
+           shadow-md transition-all duration-200 transform hover:scale-105 active:scale-95  
            ${isChanging ? 'opacity-70 cursor-not-allowed' : ''}`}
         disabled={isChanging}
         aria-label={t('changeLanguage')}
@@ -135,7 +135,7 @@ export default function LanguageSwitcher() {
                     <button
                       onClick={() => switchLocale(langCode)}
                       className={`w-full text-left flex items-center gap-3 p-3 rounded-lg 
-                              transition-all duration-300
+                              transition-all duration-200
                               ${
                                 locale === langCode
                                   ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white'

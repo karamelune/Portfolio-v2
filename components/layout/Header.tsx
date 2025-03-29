@@ -135,14 +135,14 @@ export function Header() {
               href={'/'}
               className="flex items-center justify-center w-12 h-12 rounded-full   
               bg-gray-800/70 hover:bg-gray-700/90 backdrop-blur-sm  
-              shadow-md transition-all duration-300 border border-gray-700/50   
+              shadow-md transition-all duration-200 border border-gray-700/50   
               overflow-hidden group transform hover:scale-105 active:scale-95"
               aria-label="Accueil"
             >
               <span className="text-xl transition-transform">🏠</span>
               <div
                 className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10   
-                    rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"
               ></div>
             </Link>
           </div>
@@ -153,7 +153,7 @@ export function Header() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="flex justify-center items-center w-12 h-12 rounded-full 
                       bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 
-                      shadow-md transition-all transform hover:scale-105 active:scale-95"
+                      shadow-md transition-all transform duration-200 hover:scale-105 active:scale-95"
               aria-label="Menu"
             >
               <span className="text-xl">{isMenuOpen ? '✖️' : '📋'}</span>
@@ -185,32 +185,10 @@ export function Header() {
                     <ul className="space-y-3">
                       <motion.li variants={itemVariants}>
                         <Link
-                          href={`/${locale}/about`}
-                          className="flex items-center gap-4 p-3 rounded-lg 
-                                  bg-gradient-to-r from-gray-800/50 to-gray-900/50 hover:from-indigo-900/30 hover:to-purple-900/30
-                                  transition-all duration-300 group"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <span
-                            className="w-10 h-10 flex items-center justify-center rounded-full 
-                                      bg-gradient-to-r from-indigo-600 to-purple-600 text-lg shadow-md"
-                          >
-                            👤
-                          </span>
-                          <div>
-                            <h4 className="text-lg font-medium text-white">
-                              {t('navigation.about')}
-                            </h4>
-                          </div>
-                        </Link>
-                      </motion.li>
-
-                      <motion.li variants={itemVariants}>
-                        <Link
                           href={`/${locale}/projects`}
                           className="flex items-center gap-4 p-3 rounded-lg 
                                   bg-gradient-to-r from-gray-800/50 to-gray-900/50 hover:from-indigo-900/30 hover:to-purple-900/30
-                                  transition-all duration-300 group"
+                                  transition-all duration-200 group"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           <span
@@ -273,35 +251,10 @@ export function Header() {
                 <ul className="space-y-6">
                   <motion.li variants={itemVariants}>
                     <Link
-                      href={`/${locale}/about`}
-                      className="flex items-center gap-6 p-4 rounded-xl 
-                              bg-gradient-to-r from-gray-800/50 to-gray-900/50 hover:from-indigo-900/30 hover:to-purple-900/30
-                              transition-all duration-300 group"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      <span
-                        className="w-16 h-16 flex items-center justify-center rounded-full 
-                                  bg-gradient-to-r from-indigo-600 to-purple-600 text-3xl shadow-lg"
-                      >
-                        👤
-                      </span>
-                      <div>
-                        <h3 className="text-2xl font-bold text-white">
-                          {t('navigation.about')}
-                        </h3>
-                        <p className="text-gray-400">
-                          {t('navigation.aboutDesc')}
-                        </p>
-                      </div>
-                    </Link>
-                  </motion.li>
-
-                  <motion.li variants={itemVariants}>
-                    <Link
                       href={`/${locale}/projects`}
                       className="flex items-center gap-6 p-4 rounded-xl 
                               bg-gradient-to-r from-gray-800/50 to-gray-900/50 hover:from-indigo-900/30 hover:to-purple-900/30 
-                              transition-all duration-300 group"
+                              transition-all duration-200 group"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <span

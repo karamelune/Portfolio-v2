@@ -14,7 +14,7 @@ export default function ContactSection({ fullWidth = false }) {
             <p className="mb-4">{t('description')}</p>
             <a
               href="mailto:dylanckx@gmail.com"
-              className="bg-white text-purple-700 px-4 py-2 rounded-lg inline-block hover:bg-opacity-90 transition"
+              className="bg-white text-purple-700 px-4 py-2 rounded-lg inline-block hover:bg-opacity-90 transition hover:scale-[102%]"
             >
               {t('emailButton')}
             </a>
@@ -34,7 +34,7 @@ export default function ContactSection({ fullWidth = false }) {
             <p className="mb-3 text-sm">{t('description')}</p>
             <a
               href="mailto:dylanckx@gmail.com"
-              className="bg-white text-purple-700 px-3 py-1 rounded-lg text-sm inline-block hover:bg-opacity-90"
+              className="bg-white text-purple-700 px-3 py-1 rounded-lg text-sm inline-block hover:bg-opacity-90 transition hover:scale-[102%]"
             >
               {t('emailButton')}
             </a>
